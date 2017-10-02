@@ -9,15 +9,15 @@ Build a form dynamically by getting input properties from json input in the give
 ```
 [
     {
-        type: 'Type of Input ex: text, email',
-        name: 'Name attr',
-        id: 'Id attr',
-        label: 'Label attr',
-        defaultValue: 'Initial value for input',
-        customAttrs: [
+        "type": "Type of Input ex: text, email",
+        "name": "Name attr",
+        "id": "Id attr",
+        "label": "Label attr",
+        "defaultValue": "Initial value for input",
+        "customAttrs": [
             {
-                name: 'data-attr1',
-                value: 'Attribute 1 value ...'
+                "name": "data-attr1",
+                "value": "Attribute 1 value ..."
             }    
         ]
     },
