@@ -20,7 +20,7 @@ Build a form dynamically by getting input properties from json input in the give
                 "value": "Attribute 1 value ..."
             }    
         ]
-    },
+    }
 ]
 ```
 

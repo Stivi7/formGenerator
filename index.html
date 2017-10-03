@@ -4,14 +4,43 @@
     </head>
     <body>
         <h1>Json Form Builder</h1>
-        <div class="input-placeholder">
+        <div class="row">
+        <div class="input-placeholder col-md-6">
             <textarea name="jsonInput" id="json-input" cols="30" rows="10" placeholder="Put Json Here ..."></textarea>
             <br/>
             <button id="submit">Submit</button>
-            <form id="formFields">
-                <h1>fields here</h1>
-            </form>
+            
         </div>
+
+        <div class="col-md-6">
+            <p>
+                JSON used format:
+                <br>
+                ```
+                <br>
+                [
+                <br>
+                        {
+                    <br>
+                            "type": "checkbox",<br>
+                            "name": "Name attr",<br>
+                            "id": "Id attr",<br>
+                            "label": "Label attr",<br>
+                            "class": "put a class",<br>
+                            "checked": "true"<br>
+                        }
+                <br>
+                ]
+                <br>
+                ```
+            </p>
+        </div>
+        </div>
+
+
+        <form id="formFields">
+            <h1>fields here</h1>
+        </form>
         
         <!-- Scripts -->
         <script
