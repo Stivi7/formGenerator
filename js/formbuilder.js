@@ -72,12 +72,25 @@ function FormBuilder (input) {
         outputArea.innerHTML = ''; //clears the form from previous inputs
     }
 
+
+    /**
+     * creates a div with the form html content;
+     */
+    function debugArea() { 
+        var debugDiv = document.createElement('div');
+        debugDiv.textContent = outputArea.innerHTML;
+        outputArea.appendChild(debugDiv);
+        return debugDiv;
+    }
+
+    
     
     return {
         build: build,
         createElement: createElement,
         createLabel: createLabel,
         createBlock: createBlock,
-        clearForms: clearForms
+        clearForms: clearForms,
+        debugArea: debugArea
     }
 }
