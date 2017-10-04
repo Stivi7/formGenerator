@@ -8,12 +8,18 @@ function FormBuilder (input) {
     function build() {
         clearForms();
         input = textArea.value; //get the value from text area
-        var json = JSON.parse(input); //parse the json input
-        json.forEach(obj => {
-            var block = createBlock(obj);
-            outputArea.appendChild(block);
-        })        
-
+        
+        try {
+            var json = JSON.parse(input); //parse the json input
+            json.forEach(obj => {
+                var block = createBlock(obj);
+                outputArea.appendChild(block);
+            })        
+    
+        } catch(e) {
+            alert("Invalid Json input: " + e.message);
+        }
+        
     }
 
     /**
@@ -22,15 +28,14 @@ function FormBuilder (input) {
     function createElement(jsonCFG) {
         var el = document.createElement('input');
         el.setAttribute('class', 'form-control');
+        if (jsonCFG.class) el.setAttribute('class', el.getAttribute('class') + ' ' + jsonCFG.class)
         el.setAttribute("type", jsonCFG.type);
         el.setAttribute("id", jsonCFG.id);
         el.setAttribute("name", jsonCFG.name);
-        var chkEl = el.getAttribute("type");
-        if(chkEl = "checkbox") {
-            el.setAttribute('checked', jsonCFG.checked);
-        } else {
-            el.removeAttribute('checked');
-        }
+        
+        if(jsonCFG.type == 'checkbox' && jsonCFG.checked) {
+            el.setAttribute('checked', "true");
+        } 
               
         //console.log(jsonCFG.checked);
     
