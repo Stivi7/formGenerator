@@ -1,12 +1,12 @@
 
-const textArea = document.querySelector('#json-input');
-const submitButton = document.querySelector("#submit");
-const outputArea = document.querySelector('#formFields');
-var jsonInput = '';
+var textArea;
+var submitButton = document.querySelector("#submit");
+var outputArea;
+var jsonInput;
 //var chkd = false;
 
 /**
  * Build form
  */
-submitButton.addEventListener('click', FormBuilder(jsonInput).build)
+submitButton.addEventListener('click', FormBuilder(jsonInput, textArea, outputArea).build)
 
