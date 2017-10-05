@@ -1,7 +1,8 @@
 
-var textArea;
+var textArea = document.querySelector('#json-input');
+var outputArea = document.querySelector('#formFields');
 var submitButton = document.querySelector("#submit");
-var outputArea;
+
 var jsonInput;
 //var chkd = false;
 

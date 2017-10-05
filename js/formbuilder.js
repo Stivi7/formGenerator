@@ -3,13 +3,13 @@
  * 
  */
 
-function FormBuilder (input, textArea = document.querySelector('#json-input'), outputArea = document.querySelector('#formFields')) {
-  // textArea = document.querySelector('#json-input');
-  // outputArea = document.querySelector('#formFields');
-
+function FormBuilder (input, textArea, outputArea) {
+  
+  /**
+   * core builder function
+   */
   function build () {
     clearForms()
-    
     input = textArea.value // get the value from text area
 
     try {
@@ -90,8 +90,6 @@ function FormBuilder (input, textArea = document.querySelector('#json-input'), o
       debugArea()
     }
   }
-
-
 
   return {
     build: build,
